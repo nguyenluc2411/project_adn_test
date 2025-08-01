@@ -1,0 +1,239 @@
+/** Guide.css */
+
+.guide-wrapper {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: Arial, sans-serif;
+}
+
+.guide-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.guide-breadcrumb {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.guide-breadcrumb a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.guide-title {
+  font-size: 22px;
+  color: #1e3a8a;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.guide-title span {
+  color: #e11d48;
+}
+
+.guide-toc {
+  background: #f0f8ff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.toc-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.toc-list {
+  margin-top: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.toc-list li {
+  margin-bottom: 6px;
+}
+
+.toc-list a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.toc-list a:hover {
+  text-decoration: underline;
+}
+
+.guide-section {
+  margin-bottom: 30px;
+}
+
+.guide-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+}
+
+.step-block {
+  background-color: #f9fafb;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* .step-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #e11d48;
+} */
+
+.step-block ul {
+  padding-left: 20px;
+}
+
+.step-block li {
+  margin-bottom: 4px;
+}
+
+.step-block img {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.price-table th {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.highlight {
+  color: #e11d48;
+  font-weight: bold;
+}
+
+.service-options {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.service-option {
+  background-color: #e11d48;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Layout cho step content với image bên phải */
+.step-content-with-image {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.step-text {
+  flex: 1;
+}
+
+.step-image {
+  flex: 0 0 300px; /* Fixed width for image */
+}
+
+.step-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Smooth scrolling cho anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Tạo offset cho scroll để không bị che bởi header */
+.intro-section,
+.guide-steps,
+.info-section,
+.note-section {
+  scroll-margin-top:140px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .step-content-with-image {
+    flex-direction: column;
+  }
+  
+  .step-image {
+    flex: none;
+    width: 100%;
+  }
+  
+  /* Make price table responsive on mobile */
+  .price-table {
+    font-size: 12px;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+  
+  .price-table th,
+  .price-table td {
+    padding: 8px 4px;
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .price-table {
+    font-size: 11px;
+  }
+  
+  .price-table th,
+  .price-table td {
+    padding: 6px 2px;
+  }
+}

@@ -1,0 +1,110 @@
+.blogdetail-wrapper {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.blogdetail-container {
+  max-width: 1120px;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.blogdetail-main {
+  flex: 1;
+}
+
+.blogdetail-sidebar {
+  width: 18rem;
+}
+
+.blogdetail-sidebar-box {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.blogdetail-sidebar-title {
+  font-weight: bold;
+  color: #0070c0;
+  margin-bottom: 1rem;
+}
+
+.blogdetail-sidebar-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  color: #23235b;
+}
+
+.blogdetail-sidebar-item.active {
+  background-color: #0070c0;
+  color: white;
+}
+
+.blogdetail-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #0070c0;
+  margin-bottom: 1rem;
+}
+
+.blogdetail-back {
+  color: #0070c0;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.blogdetail-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blogdetail-content {
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.blogdetail-meta {
+  font-size: 0.775rem;
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.author {
+  font-weight: 600;
+  color: #0070c0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rating-count {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.user-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

@@ -1,0 +1,143 @@
+/* BlogList.css */
+.bloglist-wrapper {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  font-family: system-ui, -apple-serif, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.bloglist-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.bloglist-main {
+  flex: 1;
+}
+
+.bloglist-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.bloglist-item {
+  display: flex;
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  gap: 1.25rem;
+  border: 1px solid #eee;
+  transition: box-shadow 0.2s;
+}
+
+.bloglist-item:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bloglist-thumb {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.bloglist-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bloglist-category {
+  background-color: #f3f4f6;
+  color: #374151;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.bloglist-item-title {
+  color: #0070c0;
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.bloglist-item-title:hover {
+  text-decoration: underline;
+}
+
+.bloglist-desc {
+  color: #4b5563;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.bloglist-meta {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.bloglist-author {
+  font-weight: 600;
+  color: #0070c0;
+}
+
+.bloglist-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.bloglist-pagination button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.bloglist-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bloglist-sidebar {
+  width: 280px;
+}
+
+.bloglist-sidebar-box {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #eee;
+}
+
+.bloglist-sidebar-title {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #0070c0;
+  margin-bottom: 1rem;
+}
+
+.bloglist-sidebar-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-weight: 600;
+  color: #23235b;
+}
+
+.bloglist-sidebar-item.active {
+  background-color: #0070c0;
+  color: white;
+  border-radius: 0.5rem;
+}

@@ -1,0 +1,422 @@
+/* Container chính với gradient nền */
+.auth-root {
+  min-height: 100vh;
+  background: radial-gradient(
+    50% 50% at 56% 50%, 
+    #0085ff 0%, 
+    #003465 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating 3D shapes */
+.auth-root::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.4) 0%, rgba(135, 206, 250, 0.2) 100%);
+  border-radius: 50% 20% 50% 20%;
+  filter: blur(1px);
+  animation: float1 12s ease-in-out infinite;
+}
+
+.auth-root::after {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  width: 180px;
+  height: 90px;
+  background: linear-gradient(135deg, rgba(135, 206, 250, 0.3) 0%, rgba(135, 206, 250, 0.1) 100%);
+  border-radius: 50px;
+  filter: blur(2px);
+  animation: float2 15s ease-in-out infinite;
+}
+
+/* Additional floating shapes */
+.auth-root {
+  background-image: 
+    radial-gradient(ellipse 200px 150px at 85% 15%, rgba(135, 206, 250, 0.2) 0%, transparent 70%),
+    radial-gradient(ellipse 300px 200px at 5% 60%, rgba(135, 206, 250, 0.15) 0%, transparent 70%),
+    radial-gradient(circle at 20% 20%, rgba(135, 206, 250, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(135, 206, 250, 0.08) 0%, transparent 50%),
+    radial-gradient(50% 50% at 56% 50%, #0085ff 0%, #003465 100%);
+}
+
+/* Logo styling - logo trong hộp trắng */
+.auth-logo {
+  width: 100px;
+  height: 80px;
+  margin-bottom: 25px;
+  z-index: 10;
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 100%;
+  padding: 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  object-fit: fill;
+}
+
+/* Glass effect form container */
+.auth-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Form elements */
+.auth-input:-webkit-autofill,
+.auth-input:-webkit-autofill:hover,
+.auth-input:-webkit-autofill:focus,
+.auth-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.15) inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+  caret-color: white;
+}
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.auth-box label {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.auth-input {
+  padding: 15px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  outline: none;
+  backdrop-filter: blur(10px);
+}
+
+.auth-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.auth-input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+/* Forgot password link */
+.auth-forgot {
+  text-align: right;
+  margin-top: -10px;
+}
+
+.auth-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+  color: white;
+}
+
+/* Button container */
+.auth-btn-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.auth-btn-row span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Main login button */
+.auth-btn.main {
+  width: 100%;
+  padding: 16px;
+  background: rgba(0, 52, 101, 0.8);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+}
+
+.auth-btn.main:hover:not(:disabled) {
+  background: rgba(0, 52, 101, 1);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.auth-btn.main:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Google button */
+.auth-btn.google {
+  width: 100%;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+}
+
+.auth-btn.google:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Bottom register link */
+.auth-bottom {
+  text-align: center;
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.auth-bottom .auth-link {
+  color: white;
+  font-weight: 600;
+}
+
+/* Error message */
+.auth-error {
+  background: rgba(255, 71, 87, 0.9);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@keyframes float1 {
+  0%, 100% { 
+    transform: translate(0px, 0px) rotate(0deg); 
+    opacity: 0.4;
+  }
+  25% { 
+    transform: translate(20px, -20px) rotate(5deg); 
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translate(-10px, -30px) rotate(-3deg); 
+    opacity: 0.5;
+  }
+  75% { 
+    transform: translate(-20px, 10px) rotate(2deg); 
+    opacity: 0.7;
+  }
+}
+
+@keyframes float2 {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+    opacity: 0.3;
+  }
+  33% { 
+    transform: translateY(-15px) rotate(2deg); 
+    opacity: 0.5;
+  }
+  66% { 
+    transform: translateY(-25px) rotate(-1deg); 
+    opacity: 0.4;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .auth-root {
+    padding: 15px;
+  }
+  
+  .auth-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    padding: 6px;
+  }
+  
+  .auth-box {
+    padding: 30px 25px;
+    max-width: 350px;
+    border-radius: 16px;
+  }
+  
+  .auth-input {
+    padding: 12px 15px;
+    font-size: 16px;
+  }
+  
+  .auth-btn.main,
+  .auth-btn.google {
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-box {
+    margin: 0 10px;
+    padding: 25px 20px;
+  }
+  
+  .auth-logo {
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+  }
+}
+/* Register form styling với layout 2 cột */
+.auth-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px; /* Tăng width cho register form */
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Layout 2 cột cho register form */
+.form-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-col label {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.form-col input {
+  padding: 15px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  outline: none;
+  backdrop-filter: blur(10px);
+}
+
+.form-col input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.form-col input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Required field styling */
+.auth-required {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+/* Responsive cho register form */
+@media (max-width: 768px) {
+  .auth-box {
+    max-width: 400px;
+    padding: 30px 25px;
+  }
+  
+  .form-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  
+  .form-col {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 25px 20px;
+    max-width: 350px;
+  }
+  
+  .form-col {
+    gap: 12px;
+  }
+}

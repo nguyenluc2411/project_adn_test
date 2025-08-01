@@ -1,0 +1,87 @@
+/* Vùng bọc chuông */
+.notification-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Biểu tượng chuông */
+.notification-bell {
+  position: relative;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Số badge thông báo */
+.notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 50%;
+  min-width: 16px;
+  text-align: center;
+  line-height: 1;
+  z-index: 1;
+}
+
+/* Dropdown danh sách thông báo */
+.notification-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+transform: translateX(50%);
+  width: 300px;
+  max-height: 400px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  overflow-y: auto;
+}
+
+/* Mỗi item thông báo */
+.notification-item {
+  padding: 10px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.notification-item:hover {
+  background-color: #f5f5f5;
+}
+
+.notification-item.unread {
+  font-weight: bold;
+}
+
+/* Dấu chấm đỏ nhỏ */
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* Khi không có thông báo */
+.notification-empty {
+  padding: 15px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
