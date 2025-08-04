@@ -4,6 +4,12 @@ This is a web-based management system for Bloodline DNA testing services, built 
 
 ---
 
+###  Demo Video
+
+ [Click here to watch the demo](https://drive.google.com/file/d/1DkzYb9zqd6XLbKnFbVS-l8jETy1pOJQm/view)
+
+---
+
 ## Tech Stack
 
 - **Backend:** Spring Boot, Spring Security, JWT, WebSocket (SockJS + STOMP)
@@ -15,14 +21,16 @@ This is a web-based management system for Bloodline DNA testing services, built 
 
 ## Features
 
-- Gmail login (Google OAuth2) + OTP verification
-- Role-based access (ADMIN, STAFF, CUSTOMER, LAFF)
+- User authentication via:
+  - Gmail login (Google OAuth2)
+  - Traditional email/password login
+- JWT-based authentication for both login methods (access & refresh tokens)
+- Role-based access control (ADMIN, STAFF, CUSTOMER, LAFF)
 - Booking management, sample collection, participant kit tracking
 - Realtime chat & notifications using WebSocket
 - VNPay payment integration (sandbox)
 - Staff dashboard: booking stats, sample statuses, customer data
 - Cloudinary integration for uploading documents/images
-
 ---
 
 ## Getting Started
